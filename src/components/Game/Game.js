@@ -36,13 +36,14 @@ const Game = () => {
     setGuesses(updatedGuesses);
 
     setGuess('');
+    setErrorMsg('');
   };
 
   return (
     <>
       <GuessList guesses={guesses} />
       <GuessInput guess={guess} handleChange={handleGuessChange} handleSubmit={handleSubmit} />
-      <h4 style={{ color: 'red' }}>{errorMsg}</h4>
+      {errorMsg && <h4 style={{ color: 'red' }}>{errorMsg}</h4>}
     </>
   );
 };
