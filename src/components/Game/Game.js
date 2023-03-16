@@ -21,6 +21,9 @@ const Game = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log({ guess });
+    setGuess('');
   };
 
   return (
