@@ -16,7 +16,7 @@ const Game = () => {
   const [guess, setGuess] = useState('');
 
   const handleGuessChange = (e) => {
-    setGuess(e.target.value);
+    setGuess(e.target.value.toUpperCase());
   };
 
   const handleSubmit = (e) => {
