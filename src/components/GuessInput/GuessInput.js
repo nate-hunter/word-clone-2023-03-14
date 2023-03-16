@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const GuessInput = () => {
   return (
-    <>
-      <h3>Guess Input...</h3>
-    </>
+    <form className='guess-input-wrapper'>
+      <label htmlFor='guess-input'>Enter guess:</label>
+      <input type='text' id='guess-input' name='guess' />
+    </form>
   );
-}
+};
 
 export default GuessInput;
