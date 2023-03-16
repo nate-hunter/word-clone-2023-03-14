@@ -1,14 +1,23 @@
 import React from 'react';
 
-const Guess = () => {
+const Guess = ({ guess }) => {
   return (
     <>
-      <span className='cell'></span>
-      <span className='cell'></span>
-      <span className='cell'></span>
-      <span className='cell'></span>
-      <span className='cell'></span>
-      <span className='cell'></span>
+      {guess === undefined ? (
+        <>
+          <span className='cell'></span>
+          <span className='cell'></span>
+          <span className='cell'></span>
+          <span className='cell'></span>
+          <span className='cell'></span>
+        </>
+      ) : (
+        guess.split('').map((letter, i) => (
+          <span key={`${i}-${letter}`} className='cell'>
+            {letter}
+          </span>
+        ))
+      )}
     </>
   );
 };
