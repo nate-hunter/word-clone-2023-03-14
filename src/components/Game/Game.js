@@ -4,7 +4,7 @@ import { sample } from '../../utils';
 import { WORDS } from '../../data';
 
 import GuessInput from '../GuessInput';
-import GuessList from '../GuessList/GuessList';
+import GuessResults from '../GuessResults';
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
@@ -41,7 +41,7 @@ const Game = () => {
 
   return (
     <>
-      <GuessList guesses={guesses} />
+      <GuessResults guesses={guesses} />
       <GuessInput guess={guess} handleChange={handleGuessChange} handleSubmit={handleSubmit} />
       {errorMsg && <h4 style={{ color: 'red' }}>{errorMsg}</h4>}
     </>
