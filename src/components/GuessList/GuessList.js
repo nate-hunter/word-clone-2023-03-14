@@ -1,13 +1,14 @@
 import React from 'react';
 
 const GuessList = ({ guesses }) => {
-  console.log('[guesses]', guesses);
-
   return (
-    <>
-      <h3>LIST OF GUESSES...</h3>
-      <div className='guess-result'>{guesses}</div>
-    </>
+    <div className='guess-result'>
+      {guesses.map((guess) => (
+        <p key={guess} className='guess'>
+          {guess}
+        </p>
+      ))}
+    </div>
   );
 };
 
