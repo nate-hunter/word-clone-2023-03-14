@@ -3,7 +3,12 @@ import React from 'react';
 const Guess = () => {
   return (
     <>
-      <h3>GUESS...</h3>
+      <span className='cell'></span>
+      <span className='cell'></span>
+      <span className='cell'></span>
+      <span className='cell'></span>
+      <span className='cell'></span>
+      <span className='cell'></span>
     </>
   );
 };
