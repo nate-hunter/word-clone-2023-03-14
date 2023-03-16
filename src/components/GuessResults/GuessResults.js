@@ -8,9 +8,9 @@ import Guess from '../Guess';
 const GuessResults = ({ guesses }) => {
   return (
     <div className='guess-results'>
-      {range(NUM_OF_GUESSES_ALLOWED).map((guess) => (
+      {range(NUM_OF_GUESSES_ALLOWED).map((guess, i) => (
         <p key={guess} className='guess'>
-          <Guess />
+          <Guess guess={guesses[i]} />
         </p>
       ))}
     </div>
