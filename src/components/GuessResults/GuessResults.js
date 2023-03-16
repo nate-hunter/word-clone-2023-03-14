@@ -2,7 +2,7 @@ import React from 'react';
 
 const GuessResults = ({ guesses }) => {
   return (
-    <div className='guess-result'>
+    <div className='guess-results'>
       {guesses.map((guess) => (
         <p key={guess} className='guess'>
           {guess}
