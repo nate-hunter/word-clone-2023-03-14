@@ -1,4 +1,5 @@
 import React from 'react';
+import Guess from '../Guess';
 
 const GuessResults = ({ guesses }) => {
   return (
