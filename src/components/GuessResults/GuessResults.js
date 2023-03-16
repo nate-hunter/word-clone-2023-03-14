@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GuessList = ({ guesses }) => {
+const GuessResults = ({ guesses }) => {
   return (
     <div className='guess-result'>
       {guesses.map((guess) => (
@@ -12,4 +12,4 @@ const GuessList = ({ guesses }) => {
   );
 };
 
-export default GuessList;
+export default GuessResults;
