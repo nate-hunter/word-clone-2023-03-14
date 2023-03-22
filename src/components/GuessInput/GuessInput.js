@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GuessInput = ({ guess, handleChange, handleSubmit }) => {
+const GuessInput = ({ guess, handleChange, handleSubmit, isGameActive }) => {
   return (
     <form className='guess-input-wrapper' onSubmit={handleSubmit}>
       <label htmlFor='guess-input'>Enter guess:</label>
@@ -11,6 +11,7 @@ const GuessInput = ({ guess, handleChange, handleSubmit }) => {
         value={guess}
         onChange={handleChange}
         pattern={'[a-zA-Z]{5}'}
+        disabled={!isGameActive}
       />
     </form>
   );
