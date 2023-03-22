@@ -41,7 +41,7 @@ const Game = () => {
 
   return (
     <>
-      <GuessResults guesses={guesses} />
+      <GuessResults guesses={guesses} answer={answer} />
       <GuessInput guess={guess} handleChange={handleGuessChange} handleSubmit={handleSubmit} />
       {errorMsg && <h4 style={{ color: 'red' }}>{errorMsg}</h4>}
     </>
