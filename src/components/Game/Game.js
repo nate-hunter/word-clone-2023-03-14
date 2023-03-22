@@ -19,7 +19,6 @@ const Game = () => {
   const [guess, setGuess] = useState('');
   const [guesses, setGuesses] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
-
   const [isGameActive, setIsGameActive] = useState(true);
   const [isGameWon, setIsGameWon] = useState(false);
 
