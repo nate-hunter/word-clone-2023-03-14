@@ -1,6 +1,9 @@
 import React from 'react';
+import { checkGuess } from '../../game-helpers';
 
-const Guess = ({ guess }) => {
+const Guess = ({ guess, answer }) => {
+  const checkedGuess = checkGuess(guess, answer);
+
   return (
     <>
       {guess === undefined ? (
@@ -12,8 +15,8 @@ const Guess = ({ guess }) => {
           <span className='cell'></span>
         </>
       ) : (
-        guess.split('').map((letter, i) => (
-          <span key={`${i}-${letter}`} className='cell'>
+        checkedGuess.map(({ letter, status }, i) => (
+          <span key={`${i}-${letter}`} className={`cell ${status}`}>
             {letter}
           </span>
         ))
