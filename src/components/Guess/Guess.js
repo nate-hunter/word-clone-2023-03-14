@@ -1,6 +1,11 @@
 import React from 'react';
+import { checkGuess } from '../../game-helpers';
 
-const Guess = ({ guess }) => {
+const Guess = ({ guess, answer }) => {
+  const checkedGuess = checkGuess(guess, answer);
+
+  if (guess) console.log({ checkedGuess });
+
   return (
     <>
       {guess === undefined ? (
